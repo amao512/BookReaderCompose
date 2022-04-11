@@ -1,4 +1,4 @@
-package com.aslnstbk.bookreadercompose.presentation.theme
+package com.aslnstbk.bookreadercompose.presentation.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

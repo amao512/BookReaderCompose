@@ -10,7 +10,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.aslnstbk.bookreadercompose.presentation.theme.BookReaderComposeTheme
+import com.aslnstbk.bookreadercompose.presentation.books.BooksList
+import com.aslnstbk.bookreadercompose.presentation.ui.theme.BookReaderComposeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    BooksList()
                 }
             }
         }
