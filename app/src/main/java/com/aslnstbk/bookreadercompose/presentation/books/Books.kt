@@ -7,6 +7,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.aslnstbk.bookreadercompose.presentation.ui.theme.Shapes
@@ -15,8 +17,13 @@ import com.aslnstbk.bookreadercompose.presentation.ui.theme.Shapes
 fun BooksList() {
     LazyColumn(
         modifier = Modifier.padding(horizontal = 16.dp),
-        contentPadding = PaddingValues(vertical = 8.dp)
+        contentPadding = PaddingValues(vertical = 8.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
+        item { BookItem() }
+        item { BookItem() }
+        item { BookItem() }
+        item { BookItem() }
         item { BookItem() }
         item { BookItem() }
         item { BookItem() }
@@ -34,9 +41,10 @@ fun BookItem() {
             verticalAlignment = Alignment.CenterVertically
         ) {
             AsyncImage(
-                modifier = Modifier.size(98.dp, 145.dp),
+                modifier = Modifier.size(98.dp, 145.dp).clip(Shapes.large),
                 model = "https://randomwordgenerator.com/img/picture-generator/55e5d5434b55ad14f1dc8460962e33791c3ad6e04e507440762a7cd69449c4_640.jpg",
-                contentDescription = ""
+                contentDescription = "",
+                contentScale = ContentScale.Crop
             )
 
             Spacer(Modifier.width(16.dp))
