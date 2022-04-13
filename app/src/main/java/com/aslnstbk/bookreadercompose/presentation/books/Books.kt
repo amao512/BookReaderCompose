@@ -1,8 +1,10 @@
 package com.aslnstbk.bookreadercompose.presentation.books
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Card
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -34,7 +36,8 @@ fun BooksList() {
 fun BookItem() {
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = Shapes.large
+        shape = Shapes.large,
+        border = BorderStroke(width = .5.dp, color = MaterialTheme.colors.primary)
     ) {
         Row(
             modifier = Modifier.padding(all = 16.dp),
